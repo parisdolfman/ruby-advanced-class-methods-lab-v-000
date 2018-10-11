@@ -59,7 +59,6 @@ class Song #object class set to constant
     song.name = mp3_file.split(" - ")[1].split(".")[0] #splits based on regex for first [0] and second [1] items in array created by split and sets to equal new_song.name   #REGEX:any single charachter except upper/lowercase a-z with any whitespace character OR with any two whitespace characters
     song.artist_name = mp3_file.split(" - ")[0]
     mp3_file.save
-    mp3_file
   end
 
 
