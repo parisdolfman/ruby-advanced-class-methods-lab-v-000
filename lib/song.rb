@@ -49,8 +49,8 @@ class Song #object class set to constant
 
   def self.new_from_filename(mp3_file)
     song = self.new
-    song.name = file_name.split(" - ")[1].split(".")[0]
-    song.artist_name = file_name.split(" - ")[0]
+    song.name = mp3_file.split(" - ")[1].split(".")[0]
+    song.artist_name = mp3_file.split(" - ")[0]
     song
   end
 
