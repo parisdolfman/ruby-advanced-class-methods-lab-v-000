@@ -56,9 +56,9 @@ class Song #object class set to constant
 
   def self.create_from_filename(mp3_file)
     song  = self.new #instantiate new instance of object called new_song to equal new song name
-    song.name = mp3_file.split(/[^a-zA-Z\s]|\s-\s/)[1] #splits based on regex for first [0] and second [1] items in array created by split and sets to equal new_song.name   #REGEX:any single charachter except upper/lowercase a-z with any whitespace character OR with any two whitespace characters
-    song.artist_name = mp3_file.split(/[^a-zA-Z\s]|\s-\s/)[0]
-    mp3_file.save #saves mp3 created
+    song.name = mp3_file.split(" - ")[1].split(".")[0] #splits based on regex for first [0] and second [1] items in array created by split and sets to equal new_song.name   #REGEX:any single charachter except upper/lowercase a-z with any whitespace character OR with any two whitespace characters
+    song.artist_name = mp3_file.split(" - ")[0]
+    mp3_file.save
     mp3_file
   end
 
