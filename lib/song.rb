@@ -61,5 +61,8 @@ class Song #object class set to constant
     @@all << song
   end
 
+  def self.destroy_all
+  @@all.clear
+  end
 
 end
